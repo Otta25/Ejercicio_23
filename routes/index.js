@@ -6,7 +6,7 @@
 const userRoutes = require("./userRoutes");
 const articleRoutes = require("./articleRoutes");
 const commentRoutes = require("./commentRoutes");
-
+const admin = require('./adminRoutes')
 /**
  * Otra alternativa podría ser organizar las rutas según su nivel de
  * privacidad (ej: si son rutas públicas o privadas).
@@ -31,7 +31,7 @@ module.exports = (app) => {
   app.use("/usuarios", userRoutes);
   app.use("/articulos", articleRoutes);
   app.use("/comentarios", commentRoutes);
-
+  app.use("/admin", admin);
   app.use("/", publicRoutes);
   app.use("/panel", privateRoutes);
 };

@@ -28,7 +28,7 @@ async function showContact(req, res) {
 }
 
 async function showAboutUs(req, res) {
-  res.render("aboutUs");
+  res.render('aboutUs');
 }
 
 // Otros handlers...
