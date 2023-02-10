@@ -8,8 +8,8 @@ async function index(req, res) {
 
 // Display the specified resource.
 async function show(req, res) {
-  const valorId = await req.params.id;
-  const articlesWithId = await Article.findByPk(valorId);
+  const idValue = await req.params.id;
+  const articlesWithId = await Article.findByPk(idValue);
   await res.json(articlesWithId)
 }
 

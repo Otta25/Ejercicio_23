@@ -1,18 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const { Article } = require("../models");
+const adminController = require("../controllers/adminController");
 
 
+router.get('/', adminController.showAdminPage)
+router.get('/:id', adminController.showAdminArticle)
 
-router.get('/',(req,res)=>{
-    res.render('admin')
-})
-
-router.get('/:id',async (req,res)=>{
-const valorId = await req.params.id;
-const articlesWithId = await Article.findByPk(valorId);
-await res.json(articlesWithId)
-})
 
 
 
