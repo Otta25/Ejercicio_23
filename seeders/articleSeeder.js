@@ -11,7 +11,6 @@ module.exports = async () => {
     articles.push({
       title: faker.lorem.sentence(5),
       content: faker.lorem.paragraphs(),
-      author:faker.lorem.words(2),
     });
   }
 

@@ -4,8 +4,9 @@ const { Article } = require("../models");
 const adminController = require("../controllers/adminController");
 
 
-router.get('/', adminController.showAdminPage)
-router.get('/:id', adminController.showAdminArticle)
+router.get('/', adminController.showAdminPage);
+router.get('/:id', adminController.showAdminArticle);
+// router.delete('/:id',adminController.deleteOneUser);
 
 
 
