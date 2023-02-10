@@ -24,11 +24,11 @@ Article.initModel(sequelize);
  * mismos (usando métodos como belongsTo, hasMany y belongsToMany)...
  */
 
-User.hasMany(Article);
-Article.belongsTo(User);
-
 Article.hasMany(Comment);
 Comment.belongsTo(Article);
+
+User.hasMany(Article);
+Article.belongsTo(User);
 
 User.hasMany(Comment);
 Comment.belongsTo(User);
