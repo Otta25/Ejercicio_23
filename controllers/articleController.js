@@ -9,11 +9,14 @@ async function index(req, res) {
 }
 
 // Display the specified resource.
+
 async function show(req, res) {
-  const idValue = await req.params.id;
-  const articlesWithId = await Article.findByPk(idValue, { include: User });
-  await res.json(articlesWithId);
+  const titleValue = await req.params.id;
+  const article = await Article.findOne({where:{ title: titleValue }}, { include: User });
+  await res.render('article',{article});
 }
+
+
 
 // Show the form for creating a new resource
 async function create(req, res) {

@@ -17,6 +17,9 @@
  */
 
 const { Article } = require("../models");
+const { User } = require("../models");
+
+
 
 async function showHome(req, res) {
   const articles = await Article.findAll();
@@ -25,6 +28,13 @@ async function showHome(req, res) {
 
 async function showContact(req, res) {
   res.render("contact");
+}
+
+
+async function show(req, res) {
+  const titleValue = await req.params.id;
+  const article = await Article.findOne({where:{ title: titleValue }}, { include: User });
+  await res.render('article',{article});
 }
 
 async function showAboutUs(req, res) {
@@ -38,4 +48,5 @@ module.exports = {
   showHome,
   showContact,
   showAboutUs,
+  show
 };

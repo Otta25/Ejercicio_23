@@ -4,12 +4,11 @@
  * Notar que este código se ejecutará en el navegador.
  */
 
-async function traerDatos() {
-const response = await fetch('http://localhost:3000/articulos');
-const resJson = await response.json()
-console.log(resJson);
-}
 
-traerDatos() 
+let articles = document.querySelectorAll('.article-card');
 
 
+articles.forEach(e => e.addEventListener('click',(e)=>{
+ let titleValue = e.target.innerText
+ window.location.href =`http://localhost:3000/${titleValue}`
+}))
