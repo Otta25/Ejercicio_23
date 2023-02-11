@@ -8,14 +8,13 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="/admin/delete/<%= user.id %>" method="post">
-      <label for="name">Title:</label>
-      <input id="title_input" type="text" />
+    <form action="/admin/new" method="get">
+      <label for="title">Title:</label>
+      <input name="content" id="title_input" type="text" />
       <label for="content">Content:</label>
       <textarea name="content" id="blog_content" cols="30" rows="10"></textarea>
-      <input type="submit" value="enviar" />
     </form>
+    <input type="submit" value="enviar" />
     <script src="js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>

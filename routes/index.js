@@ -28,6 +28,7 @@ module.exports = (app) => {
    * nombres de variables, funciones, etc, que siempre se recomienda que estén
    * en inglés.
    */
+  app.use(express.urlencoded({ extended: true }));
   app.use(express.static("public"));
   app.use("/usuarios", userRoutes);
   app.use("/articulos", articleRoutes);

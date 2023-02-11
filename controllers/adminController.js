@@ -10,13 +10,13 @@ async function showAdminArticle(req, res) {
   await res.json(articlesWithId);
 }
 
-async function deleteOneUser(req, res) {
-  let userId = req.params.id;
-  console.log(userId);
+async function deleteOnePost(req, res) {
+  let articleId = req.params.articleId;
+  console.log(articleId);
 }
 
 module.exports = {
   showAdminPage,
   showAdminArticle,
-  deleteOneUser,
+  deleteOnePost,
 };

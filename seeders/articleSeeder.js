@@ -1,15 +1,16 @@
 const { faker } = require("@faker-js/faker");
 const { Article } = require("../models");
 const { User } = require("../models/User");
+let noticias = require("../seeders/arrayNoticias");
 
 faker.locale = "es";
 
 module.exports = async () => {
   const articles = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < noticias.length; i++) {
     articles.push({
-      title: faker.lorem.sentence(5),
-      content: faker.lorem.paragraphs(),
+      title: noticias[i].titlo,
+      content: noticias[i].parrafo,
       userId: 1,
     });
   }
