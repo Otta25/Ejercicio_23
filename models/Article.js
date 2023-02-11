@@ -15,6 +15,12 @@ class Article extends Model {
         content: {
           type: DataTypes.TEXT,
         },
+        img1: {
+          type: DataTypes.STRING,
+        },
+        img2: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,
