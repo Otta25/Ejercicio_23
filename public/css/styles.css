@@ -19,6 +19,7 @@ a{
 header{
   position: fixed;
   z-index: 100;
+  box-shadow: 1px 5px 9px 0px rgba(0,0,0,0.35);
 }
 
 header a {
@@ -90,8 +91,11 @@ header nav li:hover{
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
+  margin-top: 1rem;
   gap: 1rem;
   padding-top: 7rem;
+  background-color: white;
+  box-shadow: 0px -1px 1rem 0px rgba(0,0,0,0.35);
 }
 
 footer {
@@ -144,7 +148,8 @@ footer img {
 }
 
 #carouselExampleCaptions{
-  width: 85%;
+  width: 75%;
+  height: 40%;
   margin: auto;
 }
 
@@ -177,4 +182,14 @@ footer img {
   width: 100%;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+
+#article-title{
+  width: 61vw;
+  margin: auto;
+}
+
+#article-title h2 {
+  font-size: 50px;
 }
