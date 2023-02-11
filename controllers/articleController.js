@@ -16,7 +16,8 @@ async function show(req, res) {
 }
 
 // Show the form for creating a new resource
-async function create(req, res) {}
+async function create(req, res) {
+}
 
 // Store a newly created resource in storage.
 async function store(req, res) {}

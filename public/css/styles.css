@@ -1,5 +1,131 @@
 /* Colocar aquí CSS "propio" */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: red;
+  background-color: rgb(220, 220, 220);
+  font-family: "Bebas Neue", cursive;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+}
+
+header a {
+  color: black;
+}
+
+header nav {
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 2rem;
+  transition: ease-in-out 0.2s;
+}
+
+header nav img {
+  width: 6rem;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+header nav img:hover {
+  scale: 1.1;
+}
+
+header nav li:hover{
+ transform: rotate(-15deg);
+ scale: 1.1;
+ cursor: pointer;
+}
+
+.article-card {
+  width: 15vw;
+  background-color: white;
+}
+
+.article-card img {
+  width: 100%;
+}
+
+#card-container {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(251, 251, 251);
+  position: fixed;
+  bottom: 0;
+}
+
+footer nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+}
+
+footer ul li {
+  margin-left: 1rem;
+}
+
+footer img {
+  height: 2rem;
+}
+
+
+#about-us{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+#about-us img{
+  width: 50%;
+  margin-bottom: 3rem;
 }
