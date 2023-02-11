@@ -5,12 +5,9 @@ const adminController = require("../controllers/adminController");
 
 router.get("/", adminController.showAdminPage);
 router.get("/:id", adminController.showAdminArticle);
-router.post("/update/:id", adminController.deleteOnePost);
+router.post("/", adminController.createOnePost);
 
-router.post("/new", async function (req, res) {
-  console.log(req.body);
-  res.send(req.body);
-});
+// router.post("/update/:id", adminController.deleteOnePost);
 
 router.get("/update/:id", async function (req, res) {
   const articleId = req.params.id;

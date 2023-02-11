@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Admin page</h1>
-</body>
+  </head>
+  <body>
+    <form action="/admin" method="post">
+      <label for="title">Title:</label>
+      <input name="content" id="title_input" type="text" />
+      <label for="content">Content:</label>
+      <textarea name="content" id="blog_content" cols="30" rows="10"></textarea>
+      <input type="submit" value="enviar" />
+    </form>
+
+    <script src="js/app.js"></script>
+  </body>
 </html>

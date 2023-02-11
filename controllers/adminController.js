@@ -15,8 +15,16 @@ async function deleteOnePost(req, res) {
   console.log(articleId);
 }
 
+async function createOnePost(req, res) {
+  let titulo = req.body.content[0];
+  let parrafo = req.body.content[1];
+  const newArticle = await Article.create({ title: titulo, content: parrafo });
+  res.json({ newArticle });
+}
+
 module.exports = {
   showAdminPage,
   showAdminArticle,
   deleteOnePost,
+  createOnePost,
 };
