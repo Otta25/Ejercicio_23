@@ -13,7 +13,7 @@ router.get("/update/:id", async function (req, res) {
   const articleId = req.params.id;
   const result = await Article.findByPk(articleId);
   console.log(result);
-  return res.render("home", { result });
+  return res.render("partials/cardContainer", { result });
 });
 
 router.delete("/delete/:id", async function (req, res) {

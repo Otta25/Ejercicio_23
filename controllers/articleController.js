@@ -4,8 +4,8 @@ const { Comment } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
-  const Articles = await Article.findAll({ include: User });
-  await res.json(Articles);
+  const articles = await Article.findAll({ include: User });
+  await res.render('partials/cardContainer',{articles});
 }
 
 // Display the specified resource.
