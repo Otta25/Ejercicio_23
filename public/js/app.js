@@ -9,6 +9,6 @@ let articles = document.querySelectorAll('.article-card');
 
 
 articles.forEach(e => e.addEventListener('click',(e)=>{
- let titleValue = e.target.innerText
+ let titleValue = e.target.innerText;
  window.location.href =`http://localhost:3000/${titleValue}`
 }))
