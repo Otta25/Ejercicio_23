@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { Article } = require("../models");
 
 function showAdminPage(req, res) {
@@ -11,8 +12,9 @@ async function showAdminArticle(req, res) {
 }
 
 async function deleteOnePost(req, res) {
-  let articleId = req.params.articleId;
-  console.log(articleId);
+  let articleId = req.params.id;
+  const deleted = await Article.destroy({ where: { id: articleId } });
+  console.log("delete row " + deleted);
 }
 
 async function createOnePost(req, res) {
