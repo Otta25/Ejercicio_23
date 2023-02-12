@@ -14,7 +14,7 @@ async function showAdminArticle(req, res) {
 async function deleteOnePost(req, res) {
   let articleId = req.params.id;
   const deleted = await Article.destroy({ where: { id: articleId } });
-  console.log("delete row " + deleted);
+  await res.send(`el articulo con id ${articleId} fue eliminado`);
 }
 
 async function createOnePost(req, res) {
@@ -24,9 +24,22 @@ async function createOnePost(req, res) {
   res.json({ newArticle });
 }
 
+async function editAdminArticle(req, res) {
+  console.log("funciono el patch");
+  let titulo = req.body.content[0];
+  let parrafo = req.body.content[1];
+  let articleId = req.params.id;
+  const updatedArticle = await Article.update(
+    { title: titulo, content: parrafo },
+    { where: { id: articleId } },
+  );
+  res.render("admin", { updatedArticle });
+}
+
 module.exports = {
   showAdminPage,
   showAdminArticle,
   deleteOnePost,
   createOnePost,
+  editAdminArticle,
 };
