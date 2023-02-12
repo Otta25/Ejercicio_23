@@ -68,8 +68,8 @@ header nav li:hover{
 }
 
 .article-card:hover{
-  scale: 1.03;
-  color: rgb(62, 62, 62);
+  scale: 1.05;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 
 }
@@ -175,6 +175,8 @@ footer img {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  background-color: white;
+  padding: 3rem;
   padding-top: 10rem;
 }
 
@@ -192,4 +194,18 @@ footer img {
 
 #article-title h2 {
   font-size: 50px;
+}
+
+
+#comments-container{
+  width: 65vw;
+  background-color: white;
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#comment-container textarea{
+ width: 30vw;
 }
