@@ -18,6 +18,7 @@
 
 const { Article } = require("../models");
 const { User } = require("../models");
+const { Comment } = require("../models");
 
 async function showHome(req, res) {
   const articles = await Article.findAll();
@@ -30,7 +31,7 @@ async function showContact(req, res) {
 
 async function show(req, res) {
   const titleValue = await req.params.id;
-  const article = await Article.findOne({ where: { title: titleValue } }, { include: User });
+  const article = await Article.findOne({ where: { title: titleValue }});
   await res.render("article", { article });
 }
 

@@ -1,5 +1,6 @@
-const { where } = require("sequelize");
+const { where} = require("sequelize");
 const { Article } = require("../models");
+const {User} = require("../models"); 
 
 function showAdminPage(req, res) {
   res.render("admin");
@@ -7,7 +8,7 @@ function showAdminPage(req, res) {
 
 async function showAdminArticle(req, res) {
   const valorId = await req.params.id;
-  const articlesWithId = await Article.findByPk(valorId);
+  const articlesWithId = await Article.findByPk(valorId,{ include: User });
   await res.json(articlesWithId);
 }
 

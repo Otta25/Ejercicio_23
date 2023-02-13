@@ -25,13 +25,13 @@ Article.initModel(sequelize);
  */
 
 Article.hasMany(Comment);
-Comment.belongsTo(Article);
+Comment.belongsTo(Article,{foreignKey:{ name:'articleId'}});
 
 User.hasMany(Article);
-Article.belongsTo(User);
+Article.belongsTo(User,{foreignKey:{name:'userId'}});
 
 User.hasMany(Comment);
-Comment.belongsTo(User);
+Comment.belongsTo(User,{foreignKey:{name:'userId'}});
 
 
 module.exports = {

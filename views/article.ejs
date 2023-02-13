@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title><%= article.title %> | Wired Up</title>
   </head>
@@ -21,15 +21,22 @@
             <img src="<%=article.img1%>" alt="" />
             <p><%=article.content %></p>
             <img src="<%=article.img2%>" alt="" />
+            <div class="author-container">
+            </div>
         </div>
         <div id="comments-container">
-          <h4>comentarios</h4>
-          <form action="post">
-            <textarea name="comment" id="comment" cols="70" rows="4">Escribe tu comentario</textarea>
+          <form action="/comentarios/<%= article.id %>" method="post">
+            <textarea name="comment" id="comment" cols="70" rows="4" placeholder="Agrega tu comentario!"></textarea>
             <button type="submit">Enviar</button>
           </form>
+          <% console.log(article.comments) %>
+          <% article.comments.forEach(comment => {%> 
+            <div class="comment-card"> 
+               <p><%= comment.content %></p>
+              </div>
+              <% }) %>
         </div>
     <%-include("partials/footer") %>
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>

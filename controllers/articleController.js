@@ -5,16 +5,17 @@ const { Comment } = require("../models");
 // Display a listing of the resource.
 async function index(req, res) {
   const articles = await Article.findAll({ include: User });
-  await res.render('partials/cardContainer',{articles});
+  await res.json(articles);
 }
 
 // Display the specified resource.
 
 async function show(req, res) {
-  const titleValue = await req.params.id;
-  const article = await Article.findOne({where:{ title: titleValue }}, { include: User });
-  await res.render('article',{article});
+  const articleId = await req.params.id;
+  const article = await Article.findByPk(articleId ,{include:User,include:Comment},);
+  await res.render("article", { article });
 }
+
 
 
 
