@@ -11,6 +11,7 @@ module.exports = async () => {
     articles.push({
       title: noticias[i].titlo,
       content: noticias[i].parrafo,
+      subtitle: noticias[i].subtitulo,
       img1: noticias[i].imgs.img1,
       img2: noticias[i].imgs.img2,
       userId: 1,

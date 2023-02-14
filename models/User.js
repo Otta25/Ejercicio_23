@@ -9,13 +9,15 @@ class User extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
-        firstname: {
+        userName: {
           type: DataTypes.STRING,
         },
-        lastname: {
+        password: {
           type: DataTypes.STRING,
         },
-        
+        profileImg: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,

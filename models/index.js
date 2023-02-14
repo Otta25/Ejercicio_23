@@ -15,6 +15,7 @@ const User = require("./User");
 const Comment = require("./Comment");
 const Article = require("./Article");
 
+
 User.initModel(sequelize);
 Comment.initModel(sequelize);
 Article.initModel(sequelize);
@@ -32,6 +33,8 @@ Article.belongsTo(User,{foreignKey:{name:'userId'}});
 
 User.hasMany(Comment);
 Comment.belongsTo(User,{foreignKey:{name:'userId'}});
+
+
 
 
 module.exports = {

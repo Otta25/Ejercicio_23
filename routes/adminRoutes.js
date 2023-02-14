@@ -4,6 +4,7 @@ const { Article } = require("../models");
 const adminController = require("../controllers/adminController");
 
 router.get("/", adminController.showAdminPage);
+router.post("/", adminController.createOnePost);
 router.get("/:id", adminController.showAdminArticle);
 router.patch("/:id", adminController.editAdminArticle);
 router.post("/", adminController.createOnePost);

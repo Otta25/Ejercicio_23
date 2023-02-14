@@ -20,18 +20,19 @@
           <a href="/"><li>Home</li></a>
           <a href=""><li>Contact</li></a>
           <a href="/about"><li>About Us</li></a>
+          <a href="/usuarios"><li>Sign In</li></a>
         </ul>
       </nav>
     </header>
-    <form id="form-admin-create" action="/admin" enctype="multipart/form-data" method="post">
-      <h2>Crear nuevo articulo</h2>
-      <label for="title">Title:</label>
-      <input name="title" id="title_input" type="text" />
-      <label for="content">Content:</label>
-      <textarea name="content" id="blog_content" cols="30" rows="10"></textarea>
-      <label for="image" class="form-label">Seleccionar una imagen</label>
-      <input id="image" name="image" type="file" multiple="true" class="form-control" />
-      <input type="submit" value="enviar" />
+    <form id="form-user" action="/usuarios/crear" enctype="multipart/form-data" method="post">
+      <h2>Crear nuevo Usuario</h2>
+      <label for="userName">Nombre:</label>
+      <input name="userName" id="title_input" type="text" />
+      <label for="password">Contraseña:</label>
+      <input name="password" type="password" id="blog_content"></input>
+      <label for="profileImg" class="form-label">Seleccionar una imagen</label>
+      <input id="image" name="profileImg" type="file" class="form-control" />
+      <input type="submit" value="Crear" />
     </form>
     <script src="js/app.js"></script>
   </body>

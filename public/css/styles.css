@@ -6,20 +6,18 @@
 }
 
 body {
-  background-color: rgb(220, 220, 220);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(22,65,148,1) 53%, rgba(0,0,0,1) 100%);
   font-family: "Bebas Neue", cursive;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-
-
-header{
+header {
   position: fixed;
   z-index: 100;
-  box-shadow: 1px 5px 9px 0px rgba(0,0,0,0.35);
+  box-shadow: 1px 5px 9px 0px rgba(0, 0, 0, 0.35);
 }
 
 header a {
@@ -55,32 +53,45 @@ header nav img:hover {
   scale: 1.1;
 }
 
-header nav li:hover{
- transform: rotate(-15deg);
- scale: 1.6;
- cursor: pointer;
+header nav li:hover {
+  transform: rotate(-15deg);
+  scale: 1.6;
+  cursor: pointer;
 }
 
 .article-card {
   width: 30vw;
-  height: 50vh;
+  height: 35vh;
   transition: ease-in-out 0.2s;
+  position: relative;
+  background-color: black;
 }
 
-.article-card:hover{
+
+.article-card:hover  {
   scale: 1.05;
   color: rgb(0, 0, 0);
   cursor: pointer;
-
+  background-color: rgb(52, 52, 52);
 }
+
+.article-card a {
+ color: white;
+ text-shadow: .2rem .2rem .3rem black;
+}
+
 
 .article-card h3 {
   font-size: 25px;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
 }
 
 .article-card img {
   width: 100%;
-  height: 70%;
+  height: 100%;
+  filter: opacity(0.7);
 }
 
 #card-container {
@@ -92,10 +103,12 @@ header nav li:hover{
   flex-wrap: wrap;
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: 3rem;
   gap: 1rem;
-  padding-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: white;
-  box-shadow: 0px -1px 1rem 0px rgba(0,0,0,0.35);
+  box-shadow: 0px -1px 1rem 0px rgba(0, 0, 0, 0.35);
 }
 
 footer {
@@ -130,8 +143,7 @@ footer img {
   height: 2rem;
 }
 
-
-#about-us{
+#about-us {
   width: 50%;
   height: 100%;
   display: flex;
@@ -142,52 +154,61 @@ footer img {
   text-align: justify;
 }
 
-#about-us img{
+#about-us img {
   width: 50%;
   margin-bottom: 3rem;
 }
 
-#carouselExampleCaptions{
+#carouselExampleCaptions {
   width: 75%;
-  height: 40%;
+  height: 80%;
   margin: auto;
 }
 
-#carouselExampleCaptions h5 {
-  font-size: 50px;
-  text-shadow: .3rem .3rem 1rem black;
+.carousel-inner {
+  position: relative;
+  width: 74vw;
+  height: 59vh;
+  overflow: hidden;
 }
 
-#splash{
-  width: 100%;
-  height: 100%;
-  background-color: white;
+
+#carouselExampleCaptions h5 {
+  font-size: 40px;
+  text-shadow: 0.3rem 0.3rem 1rem black;
   position: absolute;
-  z-index: 1000;
-  animation: esconder;
-  animation-duration: 2s;
-  display: flex;
+  bottom: 230px;
+  left: -100px;
 }
+
+
 
 #article-container {
   width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
   margin: auto;
   background-color: white;
   padding: 3rem;
   padding-top: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
-#article-container img{
+#article-container img {
   width: 100%;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
+#article-container h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 36px;
+}
 
-#article-title{
+#article-title {
   width: 61vw;
   margin: auto;
 }
@@ -196,27 +217,38 @@ footer img {
   font-size: 50px;
 }
 
-
-#comments-container{
-  width: 65vw;
+#comments-container {
+  width: 66vw;
   background-color: white;
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+#comments-container h4 {
+  margin: 1rem;
+}
+
+
+#send-comment{
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
 }
 
 form {
- width: 30vw;
- margin: auto;
- display: flex;
- flex-direction: column;
- padding-top: 1rem;
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  color: #f5f5f5;
 }
 
-
-
-.comment-card{
+.comment-card {
   margin: 1rem;
   width: 40vw;
   margin: auto;
@@ -226,6 +258,74 @@ form {
   font-size: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.166);
 }
+
+.comment-card h3 {
+  margin-bottom: 1rem;
+}
+
 .comment-card p {
   text-align: justify;
+}
+
+#form-admin-create{
+  width: 50vw;
+  margin: auto;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-admin-create h2 {
+  margin-bottom: 1rem;
+  font-family: 'Bebas neue';
+}
+
+
+
+#form-user{
+  width: 30vw;
+  margin: auto;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-user input {
+  margin-top: .4rem;
+}
+
+
+
+@media (max-width: 700px) {
+  #card-container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 1rem;
+    gap: 1rem;
+    padding-top: 5rem;
+    background-color: white;
+    box-shadow: 0px -1px 1rem 0px rgba(0, 0, 0, 0.35);
+  }
+  .article-card {
+    width: 70vw;
+    height: 30vh;
+  }
+
+  .article-card h3 {
+    font-size: 20px;
+  }
+
+  .carousel-inner {
+    position: relative;
+    width: 74vw;
+    height: 69vh;
+    overflow: hidden;
+  }
 }
