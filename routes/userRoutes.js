@@ -5,8 +5,10 @@ const userController = require("../controllers/userController");
 // Rutas relacionadas a los usuarios:
 // ...
 
-router.get("/", userController.index);
+router.get("/crear", userController.showCreate);
 router.post("/crear", userController.createOneUser);
+router.get("/iniciar-sesion", userController.showLogIn);
+router.post("/iniciar-sesion", userController.createOneUser);
 router.get("/", userController.store);
 router.get("/:id", userController.show);
 router.get("/:id/editar", userController.edit);

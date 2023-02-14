@@ -16,5 +16,4 @@ module.exports = async () => {
   // Ejecutar seeders de comments (datos de prueba):
   await require("./seeders/commentSeeder")();
   console.log("[Database] ¡Los datos de prueba fueron insertados!");
-
 };

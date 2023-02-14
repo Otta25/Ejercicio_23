@@ -13,16 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="../img/logo.svg" alt="Logo Wired Up" />
-        <ul>
-          <a href="/"><li>Home</li></a>
-          <a href=""><li>Contact</li></a>
-          <a href="/about"><li>About Us</li></a>
-        </ul>
-      </nav>
-    </header>
+    <header><%-include('partials/navbar')%></header>
     <form id="form-admin-create" action="/admin" enctype="multipart/form-data" method="post">
       <h2>Crear nuevo articulo</h2>
       <label for="title">Title:</label>

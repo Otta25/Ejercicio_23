@@ -6,12 +6,18 @@
 }
 
 body {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(22,65,148,1) 53%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(22, 65, 148, 1) 53%,
+    rgba(0, 0, 0, 1) 100%
+  );
   font-family: "Bebas Neue", cursive;
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 header {
@@ -67,8 +73,7 @@ header nav li:hover {
   background-color: black;
 }
 
-
-.article-card:hover  {
+.article-card:hover {
   scale: 1.05;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -76,10 +81,9 @@ header nav li:hover {
 }
 
 .article-card a {
- color: white;
- text-shadow: .2rem .2rem .3rem black;
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.3rem black;
 }
-
 
 .article-card h3 {
   font-size: 25px;
@@ -172,7 +176,6 @@ footer img {
   overflow: hidden;
 }
 
-
 #carouselExampleCaptions h5 {
   font-size: 40px;
   text-shadow: 0.3rem 0.3rem 1rem black;
@@ -180,8 +183,6 @@ footer img {
   bottom: 230px;
   left: -100px;
 }
-
-
 
 #article-container {
   width: 60vw;
@@ -232,8 +233,7 @@ footer img {
   margin: 1rem;
 }
 
-
-#send-comment{
+#send-comment {
   background-color: rgb(0, 0, 0);
   border: none;
   color: white;
@@ -267,7 +267,7 @@ form {
   text-align: justify;
 }
 
-#form-admin-create{
+#form-admin-create {
   width: 50vw;
   margin: auto;
   padding-top: 10rem;
@@ -278,12 +278,10 @@ form {
 
 #form-admin-create h2 {
   margin-bottom: 1rem;
-  font-family: 'Bebas neue';
+  font-family: "Bebas neue";
 }
 
-
-
-#form-user{
+#form-user {
   width: 30vw;
   margin: auto;
   padding-top: 10rem;
@@ -293,10 +291,8 @@ form {
 }
 
 #form-user input {
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
-
-
 
 @media (max-width: 700px) {
   #card-container {

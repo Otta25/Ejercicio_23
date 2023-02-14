@@ -11,43 +11,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="icon" type="image/x-icon" href="/../img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/../img/favicon.ico" />
     <title><%= article.title %> | Wired Up</title>
   </head>
   <body>
     <header>
-      <nav>
-        <img src="../img/logo.svg" alt="Logo Wired Up" />
-        <ul>
-          <a href="/"><li>Home</li></a>
-          <a href=""><li>Contact</li></a>
-          <a href="/about"><li>About Us</li></a>
-        </ul>
-      </nav>
-    </header>
-    
+      <%-include('partials/navbar')%>
+
     <div id="article-container">
-            <h1><%=article.title%></h1>
-            <h3><%=article.subtitle%></h3>
-            <img src="<%=article.img1%>" alt="" />
-            <p><%=article.content %></p>
-            <img src="<%=article.img2%>" alt="" />
-            <div class="author-container">
-            </div>
-        </div>
-        <div id="comments-container">
-          <h4>Comentarios (<%= article.comments.length%>)</h4>
-          <form action="/comentarios/<%= article.id %>" method="post">
-            <textarea name="comment" id="comment" cols="70" rows="4" placeholder="Agrega tu comentario!"></textarea>
-            <button id="send-comment" type="submit">Enviar</button>
-          </form>
-          <% article.comments.reverse().forEach(comment => {%> 
-            <div class="comment-card"> 
-                <h3><%=comment.userId %></h3>
-               <p><%= comment.content %></p>
-              </div>
-              <% }) %>
-        </div>
+      <h1><%=article.title%></h1>
+      <h3><%=article.subtitle%></h3>
+      <img src="<%=article.img1%>" alt="" />
+      <p><%=article.content %></p>
+      <img src="<%=article.img2%>" alt="" />
+      <div class="author-container"></div>
+    </div>
+    <div id="comments-container">
+      <h4>Comentarios (<%= article.comments.length%>)</h4>
+      <form action="/comentarios/<%= article.id %>" method="post">
+        <textarea
+          name="comment"
+          id="comment"
+          cols="70"
+          rows="4"
+          placeholder="Agrega tu comentario!"
+        ></textarea>
+        <button id="send-comment" type="submit">Enviar</button>
+      </form>
+      <% article.comments.reverse().forEach(comment => {%>
+      <div class="comment-card">
+        <h3><%=comment.userId %></h3>
+        <p><%= comment.content %></p>
+      </div>
+      <% }) %>
+    </div>
     <%-include("partials/footer") %>
     <script src="../js/app.js"></script>
   </body>
