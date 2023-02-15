@@ -26,6 +26,7 @@ app.use(
 
 app.use(passport.session());
 
+// Acá hay un error en las diapositivas: LocalStrategy lleva como parámetro un callback, por lo que hay que meter todo adentro de los paréntesis
 passport.use(
   new LocalStrategy(async (username, password, cb) => {
     try {
