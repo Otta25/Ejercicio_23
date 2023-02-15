@@ -16,12 +16,12 @@
 
       <header><%-include('partials/navbar')%></header>
     
-    <form id="form-user" action="/usuarios/iniciar-sesion" enctype="multipart/form-data" method="post">
+    <form id="form-user" action="/usuarios/iniciar-sesion" method="post">
       <h2>Iniciar sesión</h2>
-      <label for="userName">Nombre:</label>
-      <input name="userName" id="title_input" type="text" />
+      <label for="username">Nombre:</label>
+      <input name="username" id="username" type="text" />
       <label for="password">Contraseña:</label>
-      <input name="password" type="password" id="blog_content"></input>
+      <input name="password" type="password" id="password"></input>
       <input type="submit" value="Crear" />
       <small>No tenés un usuario? Registrate <a href="/usuarios/crear" class="text-decoration-none ">acá pibe</a></small>
     </form>

@@ -9,7 +9,7 @@ class User extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
-        userName: {
+        username: {
           type: DataTypes.STRING,
         },
         password: {

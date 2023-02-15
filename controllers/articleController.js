@@ -12,16 +12,12 @@ async function index(req, res) {
 
 async function show(req, res) {
   const articleId = await req.params.id;
-  const article = await Article.findByPk(articleId ,{include:User,include:Comment},);
+  const article = await Article.findByPk(articleId, { include: User, include: Comment });
   await res.render("article", { article });
 }
 
-
-
-
 // Show the form for creating a new resource
-async function create(req, res) {
-}
+async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {}

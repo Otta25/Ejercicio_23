@@ -6,9 +6,9 @@ const userController = require("../controllers/userController");
 // ...
 
 router.get("/crear", userController.showCreate);
-router.post("/crear", userController.createOneUser);
+router.post("/crear", userController.registerUser);
 router.get("/iniciar-sesion", userController.showLogIn);
-router.post("/iniciar-sesion", userController.createOneUser);
+router.post("/iniciar-sesion", userController.logInUser);
 router.get("/", userController.store);
 router.get("/:id", userController.show);
 router.get("/:id/editar", userController.edit);

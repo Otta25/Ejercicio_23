@@ -16,10 +16,10 @@
 
       <header><%-include('partials/navbar')%></header>
     
-    <form id="form-user" action="/usuarios/crear" enctype="multipart/form-data" method="post">
+    <form id="form-user" action="/usuarios/crear" method="post">
       <h2>Crear nuevo Usuario</h2>
-      <label for="userName">Nombre:</label>
-      <input name="userName" id="title_input" type="text" />
+      <label for="username">Nombre de usuario:</label>
+      <input name="username" id="title_input" type="text" />
       <label for="password">Contraseña:</label>
       <input name="password" type="password" id="blog_content"></input>
       <input type="submit" value="Crear" />
